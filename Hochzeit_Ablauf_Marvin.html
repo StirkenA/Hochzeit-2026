@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ablauf · Hochzeit Amelie & Alex</title>
+<script>if(localStorage.getItem('wpw')==='Stiffler2026'){document.documentElement.classList.add('wli');}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#f4ede2; --sand-deep:#ece1d2; --ink:#2b2723; --ink-soft:#5c544b;
+  --sea:#3a6b6f; --sea-deep:#274a4d; --sea-light:#e2ecea;
+  --gold:#b08847; --gold-soft:#c9a877; --coral:#c5563f; --coral-soft:#f0ddd6;
+  --line:#ddd0bd; --card:#fbf7f0;
+  --shadow:0 1px 2px rgba(43,39,35,.04),0 8px 24px rgba(43,39,35,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--sand);
+  background-image:radial-gradient(circle at 15% 10%,rgba(58,107,111,.05),transparent 40%),radial-gradient(circle at 90% 80%,rgba(176,136,71,.05),transparent 45%);
+  color:var(--ink);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;padding-bottom:64px;}
+.wrap{max-width:680px;margin:0 auto;padding:0 18px;}
+.hero{text-align:center;padding:54px 18px 36px;position:relative;}
+.hero .eyebrow{text-transform:uppercase;letter-spacing:.32em;font-size:11px;font-weight:500;color:var(--sea);margin-bottom:18px;}
+.hero h1{font-family:'Fraunces';font-weight:400;font-size:clamp(38px,11vw,62px);line-height:1.02;letter-spacing:-.01em;}
+.hero h1 .amp{font-style:italic;color:var(--gold);display:inline-block;padding:0 .08em;}
+.hero .date{margin-top:18px;font-family:'Fraunces';font-style:italic;font-size:18px;color:var(--ink-soft);}
+.hero .place{margin-top:4px;text-transform:uppercase;letter-spacing:.22em;font-size:11px;color:var(--ink-soft);}
+.hero .divider{width:48px;height:1px;background:var(--gold-soft);margin:26px auto 0;}
+.for-who{margin-top:26px;display:inline-block;background:var(--sea-light);border:1px solid #cfe0dd;color:var(--sea-deep);padding:9px 18px;border-radius:100px;font-size:13px;font-weight:500;}
+.for-who b{font-weight:600;}
+.legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:22px auto 8px;}
+.legend span{font-size:11.5px;display:inline-flex;align-items:center;gap:6px;color:var(--ink-soft);}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+.dot.tz{background:var(--coral);}.dot.alex{background:var(--gold);}.dot.ext{background:var(--sea);}
+.daynav{position:sticky;top:0;z-index:50;background:rgba(244,237,226,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:10px 0;margin-top:14px;}
+.daynav-inner{display:flex;gap:7px;overflow-x:auto;padding:0 18px;max-width:680px;margin:0 auto;scrollbar-width:none;}
+.daynav-inner::-webkit-scrollbar{display:none;}
+.daynav a{flex:0 0 auto;text-decoration:none;font-size:12.5px;font-weight:500;color:var(--ink-soft);background:var(--card);border:1px solid var(--line);padding:7px 13px;border-radius:100px;white-space:nowrap;transition:all .2s;}
+.daynav a.key{color:var(--coral);border-color:var(--coral-soft);background:#fff;}
+.daynav a:active{transform:scale(.96);}
+.day{margin-top:38px;scroll-margin-top:70px;}
+.day-head{display:flex;align-items:baseline;gap:12px;padding-bottom:14px;margin-bottom:6px;border-bottom:1px solid var(--line);}
+.day-num{font-family:'Fraunces';font-style:italic;font-size:15px;color:var(--gold);flex:0 0 auto;}
+.day-head h2{font-family:'Fraunces';font-weight:500;font-size:24px;letter-spacing:-.01em;}
+.day-head .sub{display:block;font-family:'Outfit';font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--ink-soft);margin-top:2px;}
+.day.keyday .day-head{border-color:var(--coral-soft);}
+.day-tag{margin-left:auto;flex:0 0 auto;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--coral);background:var(--coral-soft);padding:4px 10px;border-radius:100px;}
+.tl{position:relative;padding-left:26px;margin-top:18px;}
+.tl::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1.5px;background:var(--line);}
+.ev{position:relative;margin-bottom:14px;}
+.ev::before{content:"";position:absolute;left:-26px;top:18px;width:11px;height:11px;border-radius:50%;background:var(--sand);border:2px solid var(--gold-soft);transform:translateX(.5px);}
+.ev.tz::before{border-color:var(--coral);background:var(--coral);box-shadow:0 0 0 4px var(--coral-soft);}
+.ev-card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;}
+.ev.tz .ev-card{border-color:var(--coral-soft);}
+.ev-summary{list-style:none;cursor:pointer;padding:14px 16px;display:flex;align-items:flex-start;gap:12px;}
+.ev-summary::-webkit-details-marker{display:none;}
+.ev-time{flex:0 0 auto;min-width:52px;font-family:'Fraunces';font-weight:500;font-size:15px;color:var(--sea-deep);padding-top:1px;}
+.ev-time.none{color:var(--ink-soft);font-style:italic;font-size:13px;font-weight:400;}
+.ev-main{flex:1;min-width:0;}
+.ev-title{font-weight:500;font-size:15.5px;line-height:1.35;}
+.ev.tz .ev-title{color:var(--coral);}
+.ev-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px;}
+.chip{font-size:11px;padding:3px 9px;border-radius:100px;font-weight:500;display:inline-flex;align-items:center;gap:4px;line-height:1.3;}
+.chip.person{background:#f3ecdf;color:#8a6d34;border:1px solid #e6d6b8;}
+.chip.ext{background:var(--sea-light);color:var(--sea-deep);border:1px solid #cfe0dd;}
+.chip.tzrole{background:var(--coral);color:#fff;}
+.chip.foto{background:#fdf6eb;color:#8a6a1a;border:1px solid #e8d5a3;}
+.ev-chevron{flex:0 0 auto;align-self:center;color:var(--gold-soft);transition:transform .25s;font-size:13px;}
+.ev[open] .ev-chevron{transform:rotate(180deg);}
+.ev-detail{padding:0 16px 16px 80px;font-size:14px;color:var(--ink-soft);}
+.ev-detail .note{background:#fff;border-left:2px solid var(--gold-soft);padding:9px 12px;border-radius:0 8px 8px 0;margin-bottom:10px;line-height:1.5;}
+.ev.tz .ev-detail .note{border-left-color:var(--coral);}
+.ev-detail .note.todo{color:var(--ink);}
+.ev-detail .note.todo b{color:var(--coral);font-weight:600;}
+.ev-detail ul{list-style:none;margin-top:4px;}
+.ev-detail ul li{position:relative;padding-left:16px;margin-bottom:5px;line-height:1.45;}
+.ev-detail ul li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--gold-soft);}
+.maplink{display:inline-flex;align-items:center;gap:5px;margin-top:8px;font-size:12.5px;font-weight:500;color:var(--sea);text-decoration:none;border:1px solid #cfe0dd;background:var(--sea-light);padding:5px 11px;border-radius:8px;}
+.photo{margin-top:10px;width:100%;border-radius:10px;display:block;}
+.placeholder-img{margin-top:10px;width:100%;height:120px;border-radius:10px;background:repeating-linear-gradient(45deg,var(--sand-deep),var(--sand-deep) 10px,var(--sand) 10px,var(--sand) 20px);border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:11.5px;font-style:italic;text-align:center;padding:0 16px;}
+.bilder{margin-top:10px;display:flex;flex-direction:column;gap:8px;}
+.bild{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;}
+.bild img{width:120px;height:120px;object-fit:cover;border-radius:8px;flex:0 0 auto;display:block;background:var(--sand-deep);}
+.bild-kommentar{flex:1;min-width:0;font-size:13px;line-height:1.45;color:var(--ink);padding-top:2px;}
+.bild-kommentar em{font-style:italic;color:var(--ink-soft);}
+.bild.is-video{flex-direction:column;}
+.bild.is-video video{width:100%;border-radius:8px;max-height:240px;background:#111;display:block;}
+.prep-filter{max-width:680px;margin:18px auto 0;padding:14px 18px;background:#fff;border:1px solid var(--coral-soft);border-radius:14px;box-shadow:var(--shadow);}
+.prep-filter h3{font-family:'Fraunces';font-weight:500;font-size:16px;color:var(--coral);margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.prep-filter .note{font-size:12.5px;color:var(--ink-soft);line-height:1.45;margin-bottom:10px;}
+.prep-filter label{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink);cursor:pointer;user-select:none;}
+.prep-filter label input{accent-color:var(--coral);width:16px;height:16px;cursor:pointer;}
+.prep-filter .count{margin-left:auto;font-size:12px;color:var(--ink-soft);font-variant-numeric:tabular-nums;}
+.prep{margin:16px 0 22px;padding:14px 16px;background:#fff;border:1px solid var(--coral-soft);border-radius:14px;}
+.prep-title{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--coral);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.prep ul{list-style:none;margin:0;padding:0;}
+.prep li{margin-bottom:8px;}
+.prep li:last-child{margin-bottom:0;}
+.prep label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-size:13.5px;line-height:1.45;color:var(--ink);}
+.prep input[type="checkbox"]{margin-top:3px;accent-color:var(--coral);flex:0 0 auto;width:16px;height:16px;cursor:pointer;}
+.prep input[type="checkbox"]:checked + .prep-text{text-decoration:line-through;color:var(--ink-soft);}
+.prep-empty{font-size:13px;color:var(--ink-soft);font-style:italic;}
+body.hide-done-preps .prep.all-done{display:none;}
+.subgroup{margin-top:10px;border-top:1px dashed var(--line);padding-top:10px;}
+.subgroup-title{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-bottom:8px;font-weight:600;}
+.sub{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start;}
+.sub-num{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:var(--sea-light);color:var(--sea-deep);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.sub.tzrole .sub-num{background:var(--coral);color:#fff;}
+.sub-body{flex:1;font-size:13.5px;color:var(--ink);line-height:1.4;}
+.sub-body .who{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:1px;}
+.sub-body .who b{color:var(--coral);}
+.foot{text-align:center;margin-top:48px;padding-top:26px;border-top:1px solid var(--line);}
+.foot .heart{color:var(--gold);font-family:'Fraunces';font-style:italic;font-size:20px;}
+.foot p{font-size:12.5px;color:var(--ink-soft);margin-top:8px;}
+.foot .names{font-family:'Fraunces';font-style:italic;font-size:15px;color:var(--ink);margin-top:4px;}
+.scrolltop{position:fixed;bottom:18px;right:18px;z-index:60;width:46px;height:46px;border-radius:50%;background:var(--sea-deep);color:#fff;border:none;font-size:18px;cursor:pointer;box-shadow:0 6px 18px rgba(39,74,77,.35);opacity:0;pointer-events:none;transition:opacity .3s;}
+.scrolltop.show{opacity:1;pointer-events:auto;}
+.errbox{max-width:680px;margin:40px auto;padding:18px 20px;background:#fff;border:1px solid var(--coral);border-radius:12px;color:var(--coral);font-size:14px;line-height:1.5;}
+.errbox b{display:block;margin-bottom:6px;font-size:15px;}
+.errbox code{background:var(--coral-soft);padding:1px 5px;border-radius:4px;}
+.bild img,.photo{cursor:zoom-in;}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(20,18,15,.92);display:flex;align-items:center;justify-content:center;padding:60px 20px 90px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);}
+.lightbox[hidden]{display:none;}
+.lightbox-content{max-width:min(960px,100%);max-height:100%;display:flex;flex-direction:column;align-items:center;gap:14px;}
+.lightbox-content img{max-width:100%;max-height:75vh;object-fit:contain;border-radius:10px;box-shadow:0 14px 50px rgba(0,0,0,.55);background:#000;}
+.lightbox-caption{color:#f4ede2;font-size:14px;line-height:1.5;text-align:center;max-width:640px;font-family:'Outfit',sans-serif;padding:0 8px;}
+.lightbox-counter{color:rgba(244,237,226,.6);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-family:'Outfit',sans-serif;}
+.lightbox button{position:absolute;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:22px;width:46px;height:46px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;padding:0;font-family:'Outfit',sans-serif;transition:background .15s;}
+.lightbox button:hover{background:rgba(0,0,0,.75);}
+.lightbox-close{top:18px;right:18px;font-size:26px;}
+.lightbox-prev{left:14px;top:50%;transform:translateY(-50%);}
+.lightbox-next{right:14px;top:50%;transform:translateY(-50%);}
+@media (max-width:520px){
+  .lightbox{padding:50px 8px 70px;}
+  .lightbox-prev{left:6px;}.lightbox-next{right:6px;}
+  .lightbox button{width:40px;height:40px;font-size:20px;}
+}
+body.lb-open{overflow:hidden;}
+#pwscreen{position:fixed;inset:0;z-index:300;background:var(--sand);background-image:radial-gradient(circle at 15% 10%,rgba(58,107,111,.08),transparent 40%),radial-gradient(circle at 90% 80%,rgba(176,136,71,.08),transparent 45%);display:flex;align-items:center;justify-content:center;padding:24px;}
+.wli #pwscreen{display:none;}
+.pw-card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 2px 4px rgba(43,39,35,.04),0 20px 60px rgba(43,39,35,.12);padding:44px 32px;max-width:380px;width:100%;text-align:center;}
+.pw-eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:10.5px;font-weight:500;color:var(--sea);margin-bottom:16px;}
+.pw-title{font-family:'Fraunces';font-weight:400;font-size:clamp(32px,10vw,52px);line-height:1.05;letter-spacing:-.01em;}
+.pw-amp{font-style:italic;color:var(--gold);}
+.pw-date{margin-top:10px;font-family:'Fraunces';font-style:italic;font-size:15px;color:var(--ink-soft);}
+.pw-divider{width:40px;height:1px;background:var(--gold-soft);margin:24px auto;}
+.pw-label{display:block;font-size:12.5px;font-weight:500;color:var(--ink-soft);margin-bottom:10px;letter-spacing:.04em;}
+.pw-row{display:flex;gap:8px;}
+.pw-input{flex:1;min-width:0;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:'Outfit',sans-serif;font-size:15px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;}
+.pw-input:focus{border-color:var(--sea);}
+.pw-btn{flex:0 0 auto;padding:12px 18px;background:var(--sea-deep);color:#fff;border:none;border-radius:10px;font-family:'Fraunces';font-size:18px;cursor:pointer;transition:background .15s;}
+.pw-btn:hover{background:var(--sea);}
+.pw-error{color:var(--coral);font-size:12.5px;margin-top:9px;display:none;}
+.pw-hint{font-size:11.5px;color:var(--ink-soft);margin-top:18px;}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     ███  HIER EDITIERST DU  ███
+     Alles zwischen den geschweiften Klammern unten ist editierbar.
+     Speichern → Datei im Browser neu laden → fertig. Sonst nichts anfassen.
+
+     FELD-ERKLÄRUNG pro Programmpunkt:
+       zeit:       "16:00" | "ab 15" | "" (leer = zeigt "—")
+       titel:      Pflicht. Der Name des Programmpunkts.
+       dauer:      "(45 Min)" o.ä. – optional, wird an den Titel gehängt.
+       trauzeuge:  true  → Punkt wird ROT markiert (Marvin/Marina relevant)
+                   false → normaler Punkt
+       personen:   ["Amelie & Alex", "Marvin"]  – goldene Chips. [] = keine.
+       externe:    ["Fotografin (Martyna)"]     – grüne Chips. [] = keine.
+       tzrole:     "Trauzeuge"  → zusätzlicher roter Chip am Punkt. "" = keiner.
+       notiz:      Fließtext im aufgeklappten Bereich. "" = keine.
+       todo:       true → Notiz wird als Marvin-Aufgabe formatiert (mit "Marvin:")
+       liste:      ["Punkt 1","Punkt 2"]  – Aufzählung. [] = keine.
+       karte:      {text:"Kaiserallee 35", url:"https://maps...."}  – Button. null = keiner.
+       foto:       "img/datei.jpg"          – einzelnes großes Foto. "" = aus.
+       bilder:     [{src,kommentar}, ...]   – mehrere Bilder mit Kommentar daneben.
+                                              src = "img/dateiname.jpg"
+                                              kommentar = Text (kann auch "" sein).
+                                              Reihenfolge im Array = Reihenfolge auf der Seite.
+                                              [] = aus. Überschreibt "platzhalter".
+       platzhalter:"Foto Passat einfügen"   – grauer Foto-Platzhalter (nur wenn keine bilder). "" = aus.
+       schritte:   Unterpunkte (z.B. Trauungsablauf). Jeder: {text, who, tzrole:true/false}
+                   [] = keine Unterpunkte.
+       schritteTitel: Überschrift über den Schritten, z.B. "Ablauf der Zeremonie"
+
+     PRO TAG (vor "punkte" eintragen, ein Eintrag pro Tag):
+       vorbereitungen: ["Aufgabe 1","Aufgabe 2"]
+                       Marvin-Checkliste oben am Tag. Häkchen werden im Browser
+                       gespeichert (localStorage). Über den Filter ganz oben
+                       lassen sich Tage, an denen alles abgehakt ist, ausblenden.
+                       []  = leer (zeigt "Keine Vorbereitungen für diesen Tag").
+                       Feld weglassen = gar kein Block.
+
+     KOMMAS: Hinter jedem } muss ein Komma — außer beim letzten in der Liste.
+     ANFÜHRUNGSZEICHEN: Text immer in "doppelte" Anführungszeichen.
+       Brauchst du selbst welche im Text? Dann mit Backslash: \"so\".
+═══════════════════════════════════════════════════════════════════════════ -->
+<script id="ablaufDaten" type="application/json">
+{
+  "kopf": {
+    "eyebrow": "Ablauf für den großen Tag",
+    "braut": "Amelie",
+    "braeutigam": "Alex",
+    "datum": "12. & 13. Juni 2026",
+    "ort": "Travemünde",
+    "fuerWen": "Alle Infos"
+  },
+  "tage": [
+    {
+      "id": "mi",
+      "nummer": "01",
+      "titel": "Mittwoch",
+      "untertitel": "10. Juni · Anreise",
+      "key": false,
+      "tag": "",
+      "navLabel": "Anreisetag",
+      "vorbereitungen": [],
+      "punkte": [
+        {
+          "zeit": "", "titel": "Ankunft Travemünde", "dauer": "",
+          "trauzeuge": false, "personen": ["Amelie & Alex"], "externe": [],
+          "notiz": "Anreisetag Alex und Amelie.", "todo": false,
+          "karte": {"text": "Kaiserallee 35", "url": "https://maps.app.goo.gl/zg8cwmbboiTA4SXP6"}
+        }
+      ]
+    },
+    {
+      "id": "do",
+      "nummer": "02",
+      "titel": "Donnerstag",
+      "untertitel": "11. Juni · Aufbau & Deko",
+      "key": false,
+      "tag": "",
+      "navLabel": "Vorbereitung",
+      "vorbereitungen": [],
+      "punkte": [
+        {
+          "zeit": "", "titel": "Übergabe Papeterie + Deko an Villa Mare", "dauer": "",
+          "personen": ["Amelie & Alex"], "externe": [],
+          "notiz": "An Tellerwerk & Villa Mare. Ggf. Tischdeko bei Villa Mare selbst übernehmen."
+        },
+        {
+          "zeit": "", "titel": "Runde Tische eindecken", "dauer": "",
+          "personen": [], "externe": ["Villa Mare (Anita)"],
+          "liste": ["Floristik", "Kerzen", "Tücher", "Namensschilder", "Menükarten (Getränke + Dinner)"]
+        },
+        {
+          "zeit": "", "titel": "Barkarte an der Bar auslegen", "dauer": "",
+          "personen": [], "externe": ["Villa Mare (Anita)"],
+          "notiz": "Papeterie kommt von uns"
+        },
+        {
+          "zeit": "", "titel": "Sitzplan aufstellen", "dauer": "",
+          "personen": [], "externe": ["Villa Mare (Anita)"],
+          "notiz": "Staffelei von Katha."
+        },
+        {
+          "zeit": "", "titel": "Aufbau Gästebuch-Tisch", "dauer": "",
+          "personen": ["Amelie & Alex"], "externe": [],
+          "notiz": "Gästebuch + Sticker + Stifte + Polaroid-Kassetten bringen Alex & Amelie mit."
+        },
+        {
+          "zeit": "", "titel": "Notfallkörbchen Bäder", "dauer": "",
+          "personen": ["Amelie & Alex"], "externe": []
+        },
+        {
+          "zeit": "", "titel": "Geplante Ankunft Marvin in Travemünde: 19:00?", "dauer": "",
+          "personen": ["Marvin & Cora"], "externe": [],
+          "karte": {"text": "Gneversdorfer Weg 45", "url": "https://maps.app.goo.gl/exGuhqejaorSzYvSA"}
+        }
+      ]
+    },
+    {
+      "id": "fr",
+      "nummer": "03",
+      "titel": "Freitag",
+      "untertitel": "12. Juni · Standesamt auf der Passat",
+      "key": true,
+      "tag": "Tag 1",
+      "vorbereitungen": [
+        "Champagner für Sektempfang besorgen — ca. 0,2 l pro Person (jeder max. 2 Gläser). 28 Erwachsene (davon 2 definitiv schwanger) + 2 Kinder, dazu 2 Flaschen alkoholfreier Sekt. Bitte kaltstellen.",
+        "Gläser besorgen (im Freundeskreis leihen oder Getränkeverleih). Gerne schöne.",
+        "Morgens kleine Snacks bei Bäckerei Junge besorgen: Franzbrötchen + Laugenminis. Nur wenig, damit etwas vor Ort ist. Muss vermutlich vorbestellt werden. Dazu etwas zum Anrichten (Tablett, Korb o. Ä.).",
+        "Porsche probefahren"
+      ],
+      "punkte": [
+        {
+          "zeit": "9–10", "titel": "Floristik wird zu unser FeWo geliefert", "dauer": "",
+          "personen": [], "externe": ["Huch Floristik (Alexandra)"],
+          "notiz": "Brautstrauß, Anstecker, Tischdeko für Freitag im Tellerwerk."
+        },
+        {
+          "zeit": "09:00", "titel": "Getting Ready", "dauer": "(2–3 h)",
+          "personen": ["Amelie & Alex"], "externe": ["Stylistin (Ella)"],
+          "notiz": "Gemeinsam & zu zweit mit Stylistin in eigener FeWo.",
+          "karte": {"text": "Kaiserallee 35", "url": "https://maps.app.goo.gl/zg8cwmbboiTA4SXP6"}
+        },
+        {
+          "zeit": "11:30", "titel": "Abfahrt zum Priwall", "dauer": "",
+          "trauzeuge": true, "personen": ["Marvin & Cora"], "externe": ["Fotografin (Martyna)"],
+          "notiz": "Am besten kommt ihr mit eurem Auto zu uns, wir steigen alle um und ihr lasst das Auto bei uns an der FeWo stehen", "todo": true,
+          "liste": ["Autofähre fährt alle 10–15 Min.", "Fahrtzeit insgesamt ca. 15–30 Min."]
+        },
+        {
+          "zeit": "12:30", "titel": "Eintreffen auf der Passat", "dauer": "",
+          "personen": [], "externe": [],
+          "notiz": "Ab 12:30 Einlass Passat. Empfehlung für Gäste: gegen 12:00 parken am Travemünder Leuchtenfeld + Überfahrt mit der Personenfähre.",
+          "bilder": [
+            {"src": "img/Freitag - Passat - Aufgang.jpg", "kommentar": "Aufgang zur Passat. Den nutzen alle bis auf Oma Travemünde"},
+            {"src": "img/Freitag - Passat - Lieferantenaufgang.jpg", "kommentar": "Lieferantenaufgang für Oma Travemünde. Im Schiff muss sie dann zwei Treppen hoch. Wer ihr hilft wird noch geklärt"},
+            {"src": "img/Freitag - Passat - Aufgang zum Traubereich.jpg", "kommentar": "Aufgang zum Traubereich (an Deck) Oben findet die Trauung statt."},
+            {"src": "img/Freitag - Passat - Traubereich.jpg", "kommentar": "Traubereich — hier findet die Trauung statt. Es wird nur 12 Stühle geben. Der Rest muss stehen"}
+          ]
+        },
+        {
+          "zeit": "13:00", "titel": "Standesamt", "dauer": "(30 Min)",
+          "trauzeuge": true, "personen": [], "externe": ["Fotografin (Martyna)"], "tzrole": "Trauzeuge",
+          "notiz": "Marvin als Trauzeuge: Trauung auf der Passat. Stift & Ringe bringen Alex & Amelie mit. Du musst nichts machen außer unterschrieben.", "todo": true
+        },
+        {
+          "zeit": "13:30", "titel": "Sektempfang", "dauer": "(30 Min)",
+          "personen": [], "externe": ["Fotografin (Martyna)"], "tzrole": "Trauzeuge",
+          "notiz": "Oben an Deck. Keine Tische, keine Seifenblasen o.ä. Spalier bilden nach der Hochzeit, alle Jubeln, dann Sekt ausschenken.",
+          "liste": ["Sekt / Champagner (gekühlt) — Boys Alex", "Kleine Snacks: Laugenminis & Franzminis — Bäckerei Junge / Puck", "Gläser — Passat / Boys Alex"],
+          "bilder": [
+            {"src": "img/Freitag - Passat - Sektempfang andere Seite vom Traubereich.jpg", "kommentar": "Hier wollen wir den Sektempfang nach der Trauung machen. Das ist einfach die rechte Schiffseite auf gleicher Ebene wie der Traubereich"},
+            {"src": "img/Freitag - Passat - Blick zum Traubereich mit Abstellmöglichkeiten.jpg", "kommentar": "Blick zum Traubereich — mit Abstellmöglichkeiten für Sektempfang. Hier ein Spalier nach der Trauung. Nach der \"Zeremonie\" behält uns die Standesbeamtin noch 2 min auf der anderen Seite. Dann kommen wir hier zu euch rüber."},
+            {"src": "img/Freitag - Passat - Blick vom Traubereich nach unten.jpg", "kommentar": "Blick vom Traubereich nach unten. Wenn der Sektempfang nicht an der Seite stattfinden kann, wird er dort unten statt finden."}
+          ]
+        },
+        {
+          "zeit": "14:00", "titel": "Kleines Fotoshooting", "dauer": "(1 h)",
+          "personen": ["Amelie & Alex"], "externe": ["Fotografin (Martyna)"],
+          "notiz": "Deck der Passat (wenn möglich) & Priwallstrand."
+        },
+        {
+          "zeit": "ca. 15:00", "titel": "Rückfahrt vom Priwall", "dauer": "",
+          "trauzeuge": true, "personen": ["Marvin & Cora"], "externe": [],
+          "notiz": "Marvin: Rückfahrt vom Priwall. Wäre cool, wenn du bis wir mit den Fotos fertig sind warten kannst. Da gibt es ein Kaffee usw. Dann Rückfahrt zur FeWo und Autotausch", "todo": true
+        },
+        {
+          "zeit": "jederzeit", "titel": "Candy-Bar-Inhalt bei Villa Mare abgeben", "dauer": "",
+          "personen": ["Thijs"], "externe": [],
+          "notiz": "Am besten am Freitag übergeben."
+        },
+        {
+          "zeit": "15:00", "titel": "Eindecken Tellerwerk", "dauer": "",
+          "personen": [], "externe": ["Lieben 7"],
+          "liste": ["Deko + Floristik — bei Amelie & Alex aus der FeWo abholen (Kaiserallee 35)", "Tische eindecken — Tellerwerk", "Namensschilder + Menükarten auslegen, Blumendeko hinstellen"],
+          "karte": {"text": "Tellerwerk", "url": "https://maps.app.goo.gl/1cwRNHSMB4HCW34j7"}
+        },
+        {
+          "zeit": "18:00", "titel": "Dinner", "dauer": "",
+          "personen": [], "externe": [],
+          "notiz": "Im Tellerwerk.",
+          "bilder": [
+            {"src": "img/Freitag - Dinner - Tellerwerk.jpg", "kommentar": "Tellerwerk von außen"},
+            {"src": "img/Freitag - Tellerwerk - Lange Tafel.jpeg", "kommentar": "Die lange Tafel im Tellerwerk"}
+          ]
+        },
+        {
+          "zeit": "≈22:00", "titel": "Ende", "dauer": "",
+          "personen": [], "externe": [],
+          "notiz": "Alle fit für Samstag sein 😉"
+        }
+      ]
+    },
+    {
+      "id": "sa",
+      "nummer": "04",
+      "titel": "Samstag",
+      "untertitel": "13. Juni · Freie Trauung · Villa Mare",
+      "key": true,
+      "tag": "Haupttag",
+      "navLabel": "Trauung & Feier",
+      "vorbereitungen": [
+        "Moderation für die Freie Trauung mit Marina finalisieren",
+        "Vorstellung / Eröffnungsrede schreiben"
+      ],
+      "punkte": [
+        {
+          "zeit": "10:00", "titel": "Floristik wird geliefert", "dauer": "",
+          "personen": [], "externe": ["Villa Mare (Anita)", "Huch Floristik"],
+          "notiz": "Anstecker, Tischdeko, Freie Trauung."
+        },
+        {
+          "zeit": "ab 10", "titel": "Floristik + Deko Aufbau Villa Mare", "dauer": "",
+          "personen": [], "externe": ["Villa Mare (Anita)"],
+          "liste": ["Kerzen auf Treppe stellen (Floristik od. Amelie & Alex)", "Schild „Geschlossene Gesellschaft\"", "Schilder Eingang Kaiserallee „Eingang von Meerseite\"", "Abgrenzung Außenbereich (Vorder- & Rückseite Grundstück)"]
+        },
+        {
+          "zeit": "ab 10", "titel": "Freie Trauung – Aufbau", "dauer": "",
+          "personen": [], "externe": ["Villa Mare", "Lieben 7"],
+          "liste": ["Traubogen, Floristik + Stühle — Villa Mare (Anita)", "Karten für Gäste + Eheversprechen auf Stühle legen — Lieben 7", "Technik (Musik + Mikrofon) — Villa Mare (Anita)"]
+        },
+        {
+          "zeit": "10:00", "titel": "Getting Ready", "dauer": "(3 h + Gästestyling)",
+          "trauzeuge": true, "personen": [], "externe": ["Fotografin (Martyna)", "Stylistin (Ella)"], "tzrole": "Marvin dabei",
+          "notiz": "Wir machen uns mit ACU bei uns in der FeWo.", "todo": true,
+          "liste": ["Braut: Amelie mit Christina & Marina — FeWo Kaiserallee 37", "Bräutigam: Alex + Boys — FeWo Kaiserallee 35"],
+          "karte": {"text": "Kaiserallee 35", "url": "https://maps.app.goo.gl/zg8cwmbboiTA4SXP6"}
+        },
+        {
+          "zeit": "13:30", "titel": "First Look & Fotos", "dauer": "(1 h)",
+          "personen": ["Amelie & Alex"], "externe": ["Fotografin (Martyna)"],
+          "notiz": "Ort: Garten FeWo oder Villa Mare — Entscheidung kurzfristig nach Wetter. Amelie kommt dann rüber.",
+          "bilder": [
+            {"src": "img/Samstag - Frist Look - Garten.jpg", "kommentar": "Garten der FeWo — möglicher Ort für den First Look"}
+          ]
+        },
+        {
+          "zeit": "13:30", "titel": "Check in der Villa Mare", "dauer": "(1 h)",
+          "personen": ["Marvin & Marina"],
+          "notiz": "Wäre super wenn du/ihr nach dem fertig machen einmal in rüber in die Villa gehen könnt und checkt ob alles passt. Einmal den Ablauf der Freien Trauung für euch durchgehen", "todo": true
+        },
+        {
+          "zeit": "ab 15", "titel": "DJ Aufbau", "dauer": "",
+          "personen": [], "externe": ["DJ (Giuseppe)"]
+        },
+        {
+          "zeit": "15:00", "titel": "Eintreffen Amelie in Villa Mare", "dauer": "",
+          "personen": ["Christina & Marina"], "externe": [],
+          "notiz": "First Look mit Lieben 7 im Brautzimmer."
+        },
+        {
+          "zeit": "15:00", "titel": "Eintreffen Alex in Villa Mare", "dauer": "",
+          "personen": ["Alex"], "externe": [],
+          "notiz": "Vorbereitung Gästempfang. Nochmal Ablauf freie Trauung mit dir und Marina durchgehen ob alles passt."
+        },
+        {
+          "zeit": "15:30", "titel": "Welcome im Garten", "dauer": "(30 Min)",
+          "trauzeuge": true, "personen": ["Alex"], "externe": [],
+          "notiz": "Gäste sollen von der Meerseite in den Garten kommen.",
+          "bilder": [
+            {"src": "img/Samstag - Villa Mare - Blick zum Garten.jpeg", "kommentar": "Blick in den Garten der Villa Mare"},
+            {"src": "img/Samstag - Villa Mare - Terasse.jpeg", "kommentar": "Terrasse — hier findet der Empfang statt"}
+          ]
+        },
+        {
+          "zeit": "16:00", "titel": "Freie Trauung", "dauer": "(45 Min)",
+          "trauzeuge": true, "offen": true, "personen": [], "externe": ["Fotografin (Martyna)"], "tzrole": "Trauzeugen zentral",
+          "notiz": "Ablauf Freie Trauung noch nicht final", "todo": true,
+          "bilder": [
+            {"src": "img/Samstag - Trauung - Bereich.jpeg", "kommentar": "Trauungsbereich im Garten"},
+            {"src": "img/Samstag - Trauung - Aufstellung.jpeg", "kommentar": "Aufstellung & Blickrichtung bei der Freien Trauung"},
+            {"src": "img/Samstag - Trauung - Kanzel.jpeg", "kommentar": "Kanzel / Altar"},
+            {"src": "img/Samstag - Trauung - Blick aufs Meer.jpeg", "kommentar": "Blick aufs Meer vom Trauungsbereich"},
+            {"src": "img/Samstag - Trauung - Garten.mp4", "kommentar": "Eindruck vom Garten & Trauungsbereich (Video)"}
+          ],
+          "schritteTitel": "Ablauf der Zeremonie",
+          "schritte": [
+            {"text": "Einlaufen", "who": "Amelie mit Christina. Marina sagt wann die Musik starten soll. Musik wird über Box durch XXX angemacht. Wir stehen zu 3t vorne. Sobald ich Amelie in Empfang genommen habe setzen wir uns hin. Ihr beiden bleibst stehen.", "tzrole": false},
+            {"text": "Begrüßung durch Trauzeugen", "who": "Marvin & Marina · bestenfalls ohne Mikrofon (Technik notfalls über Villa Mare)", "tzrole": true},
+            {"text": "Worte der Trauzeugen ans Brautpaar. Danach setzt ihr euch auf eure Plätze in der ersten Reihe.", "who": "Marvin & Marina", "tzrole": true},
+            {"text": "Eheversprechen", "who": "Amelie & Alex · liegen vorab auf den Stühlen. Wir beiden stehen auf und lesen unser Eheversprechen vor.", "tzrole": false},
+            {"text": "Ringtausch", "who": "Marina moderiert, dass wir als Zeichen unserer Eheschließung die Ringe tauschen wollen. Du stehst auf und reichst die Ringe auf dem Ringkissen", "tzrole": true},
+            {"text": "Hochzeitskerze anzünden", "who": "Marina reicht die Kerze (mit Feuerzeug). Wir stehen zu4t vorne. Wir zünden die Kerze an.", "tzrole": true},
+            {"text": "Wünsche von Brautjungfern, Groomsmen & Eltern", "who": "Wir setzen uns wieder auf unsere Plätze und Marina moderiert die Glückwünsche an.", "tzrole": false},
+            {"text": "Moderation zum weiteren Ablauf", "who": "Marvin & Marina. Alle anderen haben sich wieder hingesetzt und ihr sagt wie es weiter geht (Brautpaar geht kurz rein, wir treffen uns alle auf der Terasse zur Begrüßung) ", "tzrole": true},
+            {"text": "Auszug", "who": "Amelie & Alex · mit Musik, ohne Seifenblasen (ggf. 1× Seifenblasenpistole)", "tzrole": false},
+            {"text": "Privater Moment", "who": "Amelie & Alex · 5 Min durchatmen, drinnen in der Villa Mare", "tzrole": false},
+            {"text": "Glückwünsche", "who": "Alle Gäste · auf der Terrasse, Spalier bilden. Wir kommen raus, alle jubeln und klatschen. Dann gibt es für jeden ein Glas Sekt. Dann sagen wir etwas und stoßen an. Danach gibt es Aperetif + Canapés", "tzrole": false},
+            {"text": "GESCHAFFT!", "who": "Du hast uns getraut. Drinks!", "tzrole": true}
+          ]
+        },
+        {
+          "zeit": "17:00", "titel": "Aperitif", "dauer": "(1,5 h)",
+          "personen": [], "externe": ["Fotografin", "DJ (Giuseppe)"],
+          "notiz": "Brautjungfern machen Polaroid-Fotos von Gästen fürs Gästebuch — Lieben 7."
+        },
+        {
+          "zeit": "ca. 17:45", "titel": "Kurzes Fotoshooting Amelie & Alex", "dauer": "",
+          "personen": [], "externe": [],
+          "notiz": "Kurze Liste: Eltern, Großeltern, Trauzeugen, L7, Boys."
+        },
+        {
+          "zeit": "18:30", "titel": "Dinner", "dauer": "",
+          "trauzeuge": true, "personen": ["Alle Gäste"], "externe": [], "tzrole": "Slots beachten",
+          "notiz": "Wir decken das Buffet nacheinander ab. Erst Vorspeise, danach gibt es dann einen Slot für eine Rede. Hier bitte einmal die Info ob der zweite Slot genutzt wird, sonst werden Hauptgang und Dessert zusammen abgedeckt.", "todo": true,
+          "schritteTitel": "Dinner-Ablauf",
+          "schritte": [
+            {"text": "Begrüßung durch Brautpaar + Vorstellungsrunde", "who": "Amelie & Alex · Mikrofon", "tzrole": false},
+            {"text": "Vorspeise", "who": "", "tzrole": false},
+            {"text": "SLOT 1", "who": "Zeit für Beiträge", "tzrole": true},
+            {"text": "Hauptspeise", "who": "", "tzrole": false},
+            {"text": "SLOT 2", "who": "Zeit für Beiträge", "tzrole": true},
+            {"text": "Dessert", "who": "", "tzrole": false}
+          ]
+        },
+        {
+          "zeit": "20:30", "titel": "Geschenketisch", "dauer": "",
+          "personen": ["Christina & Marina"], "externe": [],
+          "notiz": "Geschenke in die FeWo rüberbringen."
+        },
+        {
+          "zeit": "ca. 20:30", "titel": "Shooting brautpaar", "dauer": "",
+          "personen": ["Alex & Amelie"], "externe": [],
+          "notiz": "Vrsl. gehen wir vor dem Tanz nochmal 1-2 Fotos mit Martyna machen."
+        },
+        {
+          "zeit": "21:30", "titel": "Hochzeitstanz", "dauer": "",
+          "trauzeuge": true, "personen": ["Amelie & Alex"], "externe": ["DJ (Giuseppe)"],
+          "notiz": "Giuseppe meinte wir schauen mal wann der richtige Zeitpunkt ist. Da die Tage sehr lang sind sollten wir vielleicht etwas später starten damit die Leute nach dem Essen nochmal das Meer und die Terasse genießen können. Hier wäre cool, wenn du das mit Ihm ein bischen im Blick haben würdest und dann wenn er das zeichen gibt, alle nach drinnen geleiten kannst.", "todo": true
+        },
+        {
+          "zeit": "21:45", "titel": "Party", "dauer": "",
+          "trauzeuge": true, "personen": [], "externe": ["DJ (Giuseppe)"],
+          "notiz": "Gas geben, die Leute gerne daran erinnern, dass sie was trinken sollen und party machen ♥️", "todo": true
+        },
+        {
+          "zeit": "00:00", "titel": "Mitternachtssnack", "dauer": "",
+          "personen": [], "externe": ["Villa Mare (Anita)"]
+        },
+        {
+          "zeit": "ca. 3:00", "titel": "Ende", "dauer": "",
+          "personen": [], "externe": [],
+          "notiz": "🎉"
+        }
+      ]
+    }
+  ],
+  "fuss": {
+    "gruss": "Danke! ♥️",
+    "zeile": "Bei Fragen jederzeit melden bei",
+    "namen": "Amelie & Alex"
+  }
+}
+</script>
+<!-- ═══════════════ ENDE EDITIERBARER BEREICH — ab hier nichts ändern ═══════════════ -->
+
+<div id="pwscreen">
+  <div class="pw-card">
+    <div class="pw-eyebrow">Ablauf für den großen Tag</div>
+    <h1 class="pw-title">Amelie <span class="pw-amp">&</span> Alex</h1>
+    <div class="pw-date">12. &amp; 13. Juni 2026 · Travemünde</div>
+    <div class="pw-divider"></div>
+    <label class="pw-label" for="pwInput">Bitte Passwort eingeben</label>
+    <div class="pw-row">
+      <input class="pw-input" id="pwInput" type="password" placeholder="••••••••••" autocomplete="current-password">
+      <button class="pw-btn" id="pwBtn">→</button>
+    </div>
+    <div class="pw-error" id="pwError">Falsches Passwort 🙈</div>
+    <div class="pw-hint">Nur für Amelies &amp; Alex' Kreis 💛</div>
+  </div>
+</div>
+
+<div id="app"></div>
+<button class="scrolltop" id="scrolltop" aria-label="Nach oben">↑</button>
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Bildansicht">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Schließen">×</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Vorheriges Bild">‹</button>
+  <button class="lightbox-next" id="lightboxNext" aria-label="Nächstes Bild">›</button>
+  <div class="lightbox-content">
+    <img id="lightboxImg" alt="">
+    <div class="lightbox-caption" id="lightboxCap"></div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // ---- Passwort-Schutz ----
+  var _PW='Stiffler2026', _KEY='wpw';
+  if(localStorage.getItem(_KEY)!==_PW){
+    var _s=document.getElementById('pwscreen');
+    _s.style.display='flex';
+    var _i=document.getElementById('pwInput');
+    var _b=document.getElementById('pwBtn');
+    var _e=document.getElementById('pwError');
+    function _ok(){
+      if(_i.value===_PW){localStorage.setItem(_KEY,_PW);location.reload();}
+      else{_e.style.display='block';_i.value='';_i.focus();}
+    }
+    _b.addEventListener('click',_ok);
+    _i.addEventListener('keydown',function(e){if(e.key==='Enter')_ok();});
+    _i.focus();
+    return; // kein Rendering ohne korrektes Passwort
+  }
+
+  // ---- HTML-Escaping, damit Text nichts kaputt macht ----
+  function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+  // ---- Notiz formatieren: bei todo wird "Marvin:" o.ä. (alles vor erstem Doppelpunkt) fett ----
+  function renderNotiz(p){
+    if(!p.notiz) return "";
+    var cls = p.todo ? "note todo" : "note";
+    var txt = esc(p.notiz);
+    if(p.todo){
+      var i = p.notiz.indexOf(":");
+      if(i>-1){ txt = "<b>"+esc(p.notiz.slice(0,i+1))+"</b>"+esc(p.notiz.slice(i+1)); }
+    }
+    return '<div class="'+cls+'">'+txt+'</div>';
+  }
+
+  function renderChips(p){
+    var out="";
+    (p.personen||[]).forEach(function(x){ out+='<span class="chip person">'+esc(x)+'</span>'; });
+    (p.externe||[]).forEach(function(x){ out+='<span class="chip ext">'+esc(x)+'</span>'; });
+    if(p.tzrole) out+='<span class="chip tzrole">'+esc(p.tzrole)+'</span>';
+    var cnt = (p.bilder && p.bilder.length) ? p.bilder.length : (p.foto ? 1 : 0);
+    if(cnt) out+='<span class="chip foto">📷'+(cnt>1?' \xd7'+cnt:'')+'</span>';
+    return out;
+  }
+
+  function renderListe(p){
+    if(!p.liste || !p.liste.length) return "";
+    return '<ul>'+p.liste.map(function(li){return '<li>'+esc(li)+'</li>';}).join('')+'</ul>';
+  }
+
+  function renderKarte(p){
+    if(!p.karte) return "";
+    var url = p.karte.url ? esc(p.karte.url) : "#";
+    return '<a class="maplink" href="'+url+'" target="_blank" rel="noopener">📍 '+esc(p.karte.text)+'</a>';
+  }
+
+  function isVid(src){ return /\.(mp4|webm|ogg)$/i.test(src||''); }
+
+  function renderFoto(p){
+    var out = "";
+    if(p.bilder && p.bilder.length){
+      out += '<div class="bilder">'+p.bilder.map(function(b){
+        var src = esc(b.src||"");
+        var kom = b.kommentar ? '<div class="bild-kommentar">'+esc(b.kommentar)+'</div>' : '';
+        if(isVid(b.src)){
+          return '<div class="bild is-video">'+
+            '<video src="'+src+'" controls playsinline preload="metadata"></video>'+
+            kom+'</div>';
+        }
+        var alt = esc(b.kommentar||p.titel||"");
+        return '<div class="bild"><img src="'+src+'" alt="'+alt+'" loading="lazy">'+kom+'</div>';
+      }).join('')+'</div>';
+    }
+    if(p.foto) out += '<img class="photo" src="'+esc(p.foto)+'" alt="'+esc(p.titel)+'">';
+    if(p.platzhalter && !(p.bilder && p.bilder.length)) out += '<div class="placeholder-img">📷 '+esc(p.platzhalter)+'</div>';
+    return out;
+  }
+
+  function renderSchritte(p){
+    if(!p.schritte || !p.schritte.length) return "";
+    var inner = p.schritte.map(function(s,idx){
+      var who = s.who ? '<span class="who">'+esc(s.who).replace(/Marvin|Marina/g,'<b>$&</b>')+'</span>' : '';
+      return '<div class="sub'+(s.tzrole?' tzrole':'')+'">'+
+               '<span class="sub-num">'+(idx+1)+'</span>'+
+               '<span class="sub-body">'+esc(s.text)+who+'</span>'+
+             '</div>';
+    }).join('');
+    var t = p.schritteTitel ? '<div class="subgroup-title">'+esc(p.schritteTitel)+'</div>' : '';
+    return '<div class="subgroup">'+t+inner+'</div>';
+  }
+
+  function renderDetail(p){
+    var body = renderNotiz(p)+renderListe(p)+renderKarte(p)+renderFoto(p)+renderSchritte(p);
+    if(!body) body='<div class="note">—</div>';
+    return '<div class="ev-detail">'+body+'</div>';
+  }
+
+  function renderPunkt(p){
+    var tz = p.trauzeuge ? ' tz' : '';
+    var open = p.offen ? ' open' : '';
+    var zeit = p.zeit ? esc(p.zeit) : '—';
+    var zeitCls = (!p.zeit || /[^0-9:]/.test(p.zeit) && !/^\d/.test(p.zeit)) ? 'ev-time none' : 'ev-time';
+    // "ab 15", "jederzeit", "9–10", "≈22:00" sollen schmaler/kursiv: alles ohne führende Ziffer ODER mit Buchstaben
+    if(/[a-zäöü]/i.test(p.zeit||"")) zeitCls='ev-time none';
+    var titel = esc(p.titel)+(p.dauer? ' '+esc(p.dauer):'');
+    return ''+
+    '<details class="ev'+tz+'"'+open+'>'+
+      '<summary class="ev-summary">'+
+        '<span class="'+zeitCls+'">'+zeit+'</span>'+
+        '<span class="ev-main">'+
+          '<span class="ev-title">'+titel+'</span>'+
+          '<span class="ev-meta">'+renderChips(p)+'</span>'+
+        '</span>'+
+        '<span class="ev-chevron">▾</span>'+
+      '</summary>'+
+      renderDetail(p)+
+    '</details>';
+  }
+
+  function renderVorbereitungen(t){
+    if(!t.vorbereitungen) return "";
+    if(!t.vorbereitungen.length){
+      return '<div class="prep all-done" data-day="'+esc(t.id)+'">'+
+        '<div class="prep-title">📋 Vorbereitungen (Marvin)</div>'+
+        '<div class="prep-empty">Keine Vorbereitungen für diesen Tag.</div>'+
+      '</div>';
+    }
+    var items = t.vorbereitungen.map(function(text, idx){
+      var id = "prep-"+t.id+"-"+idx;
+      return '<li><label>'+
+        '<input type="checkbox" data-prep="'+esc(id)+'">'+
+        '<span class="prep-text">'+esc(text)+'</span>'+
+      '</label></li>';
+    }).join('');
+    return '<div class="prep" data-day="'+esc(t.id)+'">'+
+      '<div class="prep-title">📋 Vorbereitungen (Marvin)</div>'+
+      '<ul>'+items+'</ul>'+
+    '</div>';
+  }
+
+  function renderPrepFilter(){
+    return '<section class="prep-filter">'+
+      '<h3>📋 Vorbereitungen TODO</h3>'+
+      '<div class="note">Gerne weiter delegieren, du musst es nur bitte im Blick haben, Wer Was macht.</div>'+
+      '<label><input type="checkbox" id="hideDonePreps"> Erledigte Vorbereitungen ausblenden</label>'+
+    '</section>';
+  }
+
+  function renderTag(t){
+    var key = t.key ? ' keyday' : '';
+    var tag = t.tag ? '<span class="day-tag">'+esc(t.tag)+'</span>' : '';
+    var punkte = t.punkte.map(renderPunkt).join('');
+    return ''+
+    '<section class="day'+key+'" id="'+esc(t.id)+'">'+
+      '<div class="day-head">'+
+        '<span class="day-num">'+esc(t.nummer)+'</span>'+
+        '<div><h2>'+esc(t.titel)+'</h2><span class="sub">'+esc(t.untertitel)+'</span></div>'+
+        tag+
+      '</div>'+
+      renderVorbereitungen(t)+
+      '<div class="tl">'+punkte+'</div>'+
+    '</section>';
+  }
+
+  function renderNav(tage){
+    var links = tage.map(function(t){
+      var cls = t.key ? ' class="key"' : '';
+      var label = t.titel.slice(0,2)+' '+(t.untertitel.split('·')[0].trim());
+      // kompakteres Label: "Fr 12.6. · Standesamt"
+      var kurz = t.titel.slice(0,2)+' '+t.untertitel.replace('·','·');
+      return '<a href="#'+esc(t.id)+'"'+cls+'>'+esc(navLabel(t))+'</a>';
+    }).join('');
+    return '<nav class="daynav"><div class="daynav-inner">'+links+'</div></nav>';
+  }
+  function navLabel(t){
+    var wd = t.titel.slice(0,2);
+    var dm = (t.untertitel.match(/(\d+)\.\s*Juni/)||[])[1];
+    var base = wd+' '+(dm?dm+'.6.':'');
+    if(t.navLabel) return base+' · '+t.navLabel;
+    if(t.key){ var stich=(t.untertitel.split('·')[1]||'').trim().split(' ')[0]; return base+(stich?' · '+stich:''); }
+    return base;
+  }
+
+  function renderHero(k){
+    return ''+
+    '<header class="hero">'+
+      '<div class="eyebrow">'+esc(k.eyebrow)+'</div>'+
+      '<h1>'+esc(k.braut)+' <span class="amp">&</span> '+esc(k.braeutigam)+'</h1>'+
+      '<div class="date">'+esc(k.datum)+'</div>'+
+      '<div class="place">'+esc(k.ort)+'</div>'+
+      '<div class="divider"></div>'+
+      '<div class="for-who">'+esc(k.fuerWen)+'</div>'+
+    '</header>'+
+    '<div class="legend">'+
+      '<span><span class="dot tz"></span> Trauzeugen-Aufgabe</span>'+
+      '<span><span class="dot alex"></span> Amelie &amp; Alex</span>'+
+      '<span><span class="dot ext"></span> Externe / Dienstleister</span>'+
+    '</div>';
+  }
+
+  function renderFuss(f){
+    return ''+
+    '<footer class="foot">'+
+      '<div class="heart">'+esc(f.gruss)+'</div>'+
+      '<p>'+esc(f.zeile)+'</p>'+
+      '<div class="names">'+esc(f.namen)+'</div>'+
+    '</footer>';
+  }
+
+  // ---- Laden + Rendern ----
+  var raw = document.getElementById('ablaufDaten').textContent;
+  var data;
+  try{
+    data = JSON.parse(raw);
+  }catch(e){
+    document.getElementById('app').innerHTML =
+      '<div class="errbox"><b>⚠️ Fehler im Datenblock</b>'+
+      'Die Daten konnten nicht gelesen werden – meist ein vergessenes oder zu viel gesetztes <code>Komma</code>, '+
+      'oder ein fehlendes <code>"</code>.<br><br>Technische Meldung:<br><code>'+esc(e.message)+'</code></div>';
+    return;
+  }
+
+  var html = renderHero(data.kopf)
+           + renderPrepFilter()
+           + renderNav(data.tage)
+           + '<main class="wrap">'
+           + data.tage.map(renderTag).join('')
+           + renderFuss(data.fuss)
+           + '</main>';
+  document.getElementById('app').innerHTML = html;
+
+  // Scroll-to-top
+  var stb=document.getElementById('scrolltop');
+  window.addEventListener('scroll',function(){stb.classList.toggle('show',window.scrollY>500);});
+  stb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+  // ---- Vorbereitungen: Häkchen merken + Filter "Erledigte ausblenden" ----
+  function updateAllDone(){
+    document.querySelectorAll('.prep').forEach(function(p){
+      var boxes = p.querySelectorAll('input[type="checkbox"]');
+      if(!boxes.length) return; // leere Tage bleiben als "all-done" markiert (siehe Render)
+      var allDone = Array.prototype.every.call(boxes, function(b){return b.checked;});
+      p.classList.toggle('all-done', allDone);
+    });
+  }
+  document.querySelectorAll('input[data-prep]').forEach(function(cb){
+    var key = cb.getAttribute('data-prep');
+    if(localStorage.getItem(key)==='1') cb.checked = true;
+    cb.addEventListener('change', function(){
+      localStorage.setItem(key, cb.checked ? '1' : '0');
+      updateAllDone();
+    });
+  });
+  updateAllDone();
+  var hideDone = document.getElementById('hideDonePreps');
+  if(hideDone){
+    if(localStorage.getItem('hideDonePreps')==='1') hideDone.checked = true;
+    document.body.classList.toggle('hide-done-preps', hideDone.checked);
+    hideDone.addEventListener('change', function(){
+      localStorage.setItem('hideDonePreps', hideDone.checked ? '1' : '0');
+      document.body.classList.toggle('hide-done-preps', hideDone.checked);
+    });
+  }
+
+  // ---- Bild-Lightbox: Klick aufs Bild → Overlay mit größerer Version ----
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightboxImg');
+  var lbCap = document.getElementById('lightboxCap');
+  var lbCounter = document.getElementById('lightboxCounter');
+  var lbPrev = document.getElementById('lightboxPrev');
+  var lbNext = document.getElementById('lightboxNext');
+  var lbGroup = [];
+  var lbIdx = 0;
+
+  function lbShow(){
+    var it = lbGroup[lbIdx]; if(!it) return;
+    lbImg.src = it.src; lbImg.alt = it.alt;
+    lbCap.textContent = it.cap || '';
+    lbCap.style.display = it.cap ? '' : 'none';
+    if(lbGroup.length>1){
+      lbPrev.style.display = ''; lbNext.style.display = '';
+      lbCounter.style.display = '';
+      lbCounter.textContent = (lbIdx+1)+' / '+lbGroup.length;
+    } else {
+      lbPrev.style.display = 'none'; lbNext.style.display = 'none';
+      lbCounter.style.display = 'none';
+    }
+  }
+  function lbOpen(group, idx){
+    lbGroup = group; lbIdx = idx;
+    lbShow();
+    lb.hidden = false;
+    document.body.classList.add('lb-open');
+  }
+  function lbClose(){
+    lb.hidden = true;
+    document.body.classList.remove('lb-open');
+    lbImg.src = ''; // Speicher freigeben
+  }
+  function lbNextFn(){ lbIdx = (lbIdx+1) % lbGroup.length; lbShow(); }
+  function lbPrevFn(){ lbIdx = (lbIdx-1+lbGroup.length) % lbGroup.length; lbShow(); }
+
+  // Galerie-Bilder (nur Fotos, keine Videos)
+  document.querySelectorAll('.bilder').forEach(function(g){
+    var items = [];
+    var imgEls = [];
+    Array.prototype.forEach.call(g.querySelectorAll('.bild'), function(b){
+      var img = b.querySelector('img');
+      if(!img) return; // Video-Karte überspringen
+      var cap = b.querySelector('.bild-kommentar');
+      items.push({ src: img.src, alt: img.alt || '', cap: cap ? cap.textContent : '' });
+      imgEls.push(img);
+    });
+    imgEls.forEach(function(img, i){
+      img.addEventListener('click', function(){ lbOpen(items, i); });
+    });
+  });
+  // Einzelne große Fotos (.photo)
+  document.querySelectorAll('img.photo').forEach(function(img){
+    img.addEventListener('click', function(){
+      lbOpen([{src: img.src, alt: img.alt||'', cap: img.alt||''}], 0);
+    });
+  });
+
+  lb.addEventListener('click', function(e){ if(e.target===lb) lbClose(); });
+  document.getElementById('lightboxClose').addEventListener('click', lbClose);
+  lbPrev.addEventListener('click', lbPrevFn);
+  lbNext.addEventListener('click', lbNextFn);
+  document.addEventListener('keydown', function(e){
+    if(lb.hidden) return;
+    if(e.key==='Escape') lbClose();
+    else if(e.key==='ArrowLeft' && lbGroup.length>1) lbPrevFn();
+    else if(e.key==='ArrowRight' && lbGroup.length>1) lbNextFn();
+  });
+})();
+</script>
+
+</body>
+</html>
