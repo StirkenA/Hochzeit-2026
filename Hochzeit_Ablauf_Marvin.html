@@ -88,7 +88,7 @@ body{font-family:'Outfit',sans-serif;background:var(--sand);
 .bild-kommentar em{font-style:italic;color:var(--ink-soft);}
 .bild.is-video{flex-direction:column;}
 .bild.is-video video{width:100%;border-radius:8px;max-height:240px;background:#111;display:block;}
-.prep-filter{max-width:680px;margin:18px auto 0;padding:14px 18px;background:#fff;border:1px solid var(--coral-soft);border-radius:14px;box-shadow:var(--shadow);}
+.prep-filter{max-width:680px;width:calc(100% - 36px);margin:18px auto 0;padding:14px 18px;background:#fff;border:1px solid var(--coral-soft);border-radius:14px;box-shadow:var(--shadow);}
 .prep-filter h3{font-family:'Fraunces';font-weight:500;font-size:16px;color:var(--coral);margin-bottom:6px;display:flex;align-items:center;gap:8px;}
 .prep-filter .note{font-size:12.5px;color:var(--ink-soft);line-height:1.45;margin-bottom:10px;}
 .prep-filter label{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink);cursor:pointer;user-select:none;}
@@ -104,7 +104,7 @@ body{font-family:'Outfit',sans-serif;background:var(--sand);
 .prep input[type="checkbox"]:checked + .prep-text{text-decoration:line-through;color:var(--ink-soft);}
 .prep-empty{font-size:13px;color:var(--ink-soft);font-style:italic;}
 body.hide-done-preps .prep.all-done{display:none;}
-.adr-wrap{max-width:680px;margin:12px auto 0;padding:14px 18px;background:#fff;border:1px solid #cfe0dd;border-radius:14px;box-shadow:var(--shadow);}
+.adr-wrap{max-width:680px;width:calc(100% - 36px);margin:12px auto 0;padding:14px 18px;background:#fff;border:1px solid #cfe0dd;border-radius:14px;box-shadow:var(--shadow);}
 .adr-wrap>h3{font-family:'Fraunces';font-weight:500;font-size:16px;color:var(--sea-deep);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
 .adr-group{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:8px;}
 .adr-group:last-child{margin-bottom:0;}
@@ -761,7 +761,7 @@ body.lb-open{overflow:hidden;}
       ? '<details class="adr-group"><summary>📍 Locations <span class="adr-chevron">▾</span></summary><div class="adr-group-body">'+cards(data.adressen.locations)+'</div></details>'
       : '';
     var perHtml = (data.adressen.personen&&data.adressen.personen.length)
-      ? '<details class="adr-group"><summary>🏠 Unterkünfte &amp; Adressen <span class="adr-chevron">▾</span></summary><div class="adr-group-body">'+cards(data.adressen.personen)+'</div></details>'
+      ? '<details class="adr-group"><summary>🏠 Unterkünfte <span class="adr-chevron">▾</span></summary><div class="adr-group-body">'+cards(data.adressen.personen)+'</div></details>'
       : '';
     return '<section class="adr-wrap"><h3>📍 Adressen</h3>'+locHtml+perHtml+'</section>';
   }
