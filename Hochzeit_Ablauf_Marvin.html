@@ -104,6 +104,22 @@ body{font-family:'Outfit',sans-serif;background:var(--sand);
 .prep input[type="checkbox"]:checked + .prep-text{text-decoration:line-through;color:var(--ink-soft);}
 .prep-empty{font-size:13px;color:var(--ink-soft);font-style:italic;}
 body.hide-done-preps .prep.all-done{display:none;}
+.adr-wrap{max-width:680px;margin:12px auto 0;padding:14px 18px;background:#fff;border:1px solid #cfe0dd;border-radius:14px;box-shadow:var(--shadow);}
+.adr-wrap>h3{font-family:'Fraunces';font-weight:500;font-size:16px;color:var(--sea-deep);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.adr-group{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:8px;}
+.adr-group:last-child{margin-bottom:0;}
+.adr-group summary{cursor:pointer;list-style:none;padding:11px 14px;font-size:13.5px;font-weight:600;color:var(--ink);background:var(--sand);display:flex;justify-content:space-between;align-items:center;user-select:none;}
+.adr-group summary::-webkit-details-marker{display:none;}
+.adr-chevron{transition:transform .25s;color:var(--gold-soft);font-size:12px;}
+.adr-group[open] .adr-chevron{transform:rotate(180deg);}
+.adr-group-body{padding:12px 14px;}
+.adr-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+@media(max-width:420px){.adr-grid{grid-template-columns:1fr;}}
+.adr-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;}
+.adr-name{font-weight:600;font-size:13px;color:var(--ink);margin-bottom:2px;}
+.adr-addr{font-size:12px;color:var(--ink-soft);line-height:1.4;}
+.adr-addr.pend{font-style:italic;color:var(--gold);}
+.adr-link{display:inline-flex;align-items:center;gap:3px;margin-top:5px;font-size:11.5px;font-weight:500;color:var(--sea);text-decoration:none;}
 .subgroup{margin-top:10px;border-top:1px dashed var(--line);padding-top:10px;}
 .subgroup-title{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-bottom:8px;font-weight:600;}
 .sub{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start;}
@@ -525,6 +541,22 @@ body.lb-open{overflow:hidden;}
       ]
     }
   ],
+  "adressen": {
+    "locations": [
+      {"name": "Passat – Standesamt", "adresse": "Priwall, 23570 Travemünde", "url": null},
+      {"name": "Tellerwerk – Dinner Freitag", "adresse": "Travemünde", "url": "https://maps.app.goo.gl/1cwRNHSMB4HCW34j7"},
+      {"name": "Villa Mare – Trauung & Feier", "adresse": "Kaiserallee, Travemünde", "url": null}
+    ],
+    "personen": [
+      {"name": "Amelie & Alex", "adresse": "Kaiserallee 35", "url": "https://maps.app.goo.gl/zg8cwmbboiTA4SXP6"},
+      {"name": "Marina & Christina", "adresse": "Kaiserallee 37", "url": null},
+      {"name": "Ela & Uli", "adresse": "Ausstehend", "url": null},
+      {"name": "Marvin & Cora", "adresse": "Gneversdorfer Weg 45", "url": "https://maps.app.goo.gl/exGuhqejaorSzYvSA"},
+      {"name": "Jannis", "adresse": "Fehlingstraße 12A", "url": null},
+      {"name": "Kai", "adresse": "Kaiserallee 4", "url": null},
+      {"name": "Thijs", "adresse": "Ausstehend", "url": null}
+    ]
+  },
   "fuss": {
     "gruss": "Danke! ♥️",
     "zeile": "Bei Fragen jederzeit melden bei",
@@ -711,6 +743,29 @@ body.lb-open{overflow:hidden;}
     '</section>';
   }
 
+  function renderAdressen(data){
+    if(!data.adressen) return "";
+    function cards(items){
+      return '<div class="adr-grid">'+items.map(function(item){
+        var pend = item.adresse==="Ausstehend";
+        var addrCls = "adr-addr"+(pend?" pend":"");
+        var link = item.url ? '<a class="adr-link" href="'+esc(item.url)+'" target="_blank" rel="noopener">📍 Karte</a>' : '';
+        return '<div class="adr-card">'+
+          '<div class="adr-name">'+esc(item.name)+'</div>'+
+          '<div class="'+addrCls+'">'+esc(item.adresse)+'</div>'+
+          link+
+        '</div>';
+      }).join('')+'</div>';
+    }
+    var locHtml = (data.adressen.locations&&data.adressen.locations.length)
+      ? '<details class="adr-group"><summary>📍 Locations <span class="adr-chevron">▾</span></summary><div class="adr-group-body">'+cards(data.adressen.locations)+'</div></details>'
+      : '';
+    var perHtml = (data.adressen.personen&&data.adressen.personen.length)
+      ? '<details class="adr-group"><summary>🏠 Unterkünfte &amp; Adressen <span class="adr-chevron">▾</span></summary><div class="adr-group-body">'+cards(data.adressen.personen)+'</div></details>'
+      : '';
+    return '<section class="adr-wrap"><h3>📍 Adressen</h3>'+locHtml+perHtml+'</section>';
+  }
+
   function renderTag(t){
     var key = t.key ? ' keyday' : '';
     var tag = t.tag ? '<span class="day-tag">'+esc(t.tag)+'</span>' : '';
@@ -787,6 +842,7 @@ body.lb-open{overflow:hidden;}
 
   var html = renderHero(data.kopf)
            + renderPrepFilter()
+           + renderAdressen(data)
            + renderNav(data.tage)
            + '<main class="wrap">'
            + data.tage.map(renderTag).join('')
