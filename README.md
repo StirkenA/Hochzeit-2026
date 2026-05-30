@@ -2,7 +2,7 @@
 
 Ablaufplan für Marvin (Trauzeuge) · 12.–13. Juni 2026 · Travemünde
 
-**Live:** https://hochzeit-amelie-alex-2026.netlify.app  
+**Live:** https://stirkena.github.io/Hochzeit-2026  
 **Passwort:** Stiffler2026
 
 ---
