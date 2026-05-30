@@ -16,4 +16,4 @@ node -e "
 git add .
 git commit -m "$MSG"
 git push
-echo "🚀 Live auf https://hochzeit-amelie-alex-2026.netlify.app"
+echo "🚀 Live auf https://stirkena.github.io/Hochzeit-2026"
