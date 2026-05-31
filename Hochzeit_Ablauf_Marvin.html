@@ -131,7 +131,7 @@ body.hide-done-preps .prep.all-done{display:none;}
 @media(max-width:400px){.sitz-pair{grid-template-columns:1fr;}}
 .sitz-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-soft);margin-bottom:6px;}
 .sitz-placeholder{width:100%;aspect-ratio:105/148;background:repeating-linear-gradient(45deg,var(--sand-deep),var(--sand-deep) 8px,var(--sand) 8px,var(--sand) 16px);border:2px dashed var(--line);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--ink-soft);font-size:12px;font-style:italic;text-align:center;padding:12px;}
-.sitz-img{width:100%;aspect-ratio:105/148;object-fit:contain;border-radius:8px;display:block;border:1px solid var(--line);}
+.sitz-img{width:100%;aspect-ratio:105/148;object-fit:contain;border-radius:8px;display:block;border:1px solid var(--line);cursor:zoom-in;}
 .subgroup{margin-top:10px;border-top:1px dashed var(--line);padding-top:10px;}
 .subgroup-title{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-bottom:8px;font-weight:600;}
 .sub{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start;}
@@ -1065,6 +1065,17 @@ body.lb-open{overflow:hidden;}
       img.addEventListener('click', function(){ lbOpen(items, i); });
     });
   });
+  // Sitzordnung-Bilder (als Gruppe: Fr → Sa navigierbar)
+  var sitzImgs = document.querySelectorAll('img.sitz-img');
+  if(sitzImgs.length){
+    var sitzItems = [];
+    Array.prototype.forEach.call(sitzImgs, function(img){
+      sitzItems.push({src: img.src, alt: img.alt||'', cap: img.alt||''});
+    });
+    Array.prototype.forEach.call(sitzImgs, function(img, i){
+      img.addEventListener('click', function(){ lbOpen(sitzItems, i); });
+    });
+  }
   // Einzelne große Fotos (.photo)
   document.querySelectorAll('img.photo').forEach(function(img){
     img.addEventListener('click', function(){
