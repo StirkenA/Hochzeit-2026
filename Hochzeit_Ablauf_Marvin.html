@@ -123,6 +123,15 @@ body.hide-done-preps .prep.all-done{display:none;}
 .adr-rolle{font-size:11px;color:var(--ink-soft);margin-bottom:4px;text-transform:uppercase;letter-spacing:.1em;}
 .adr-tel{display:inline-flex;align-items:center;gap:4px;margin-top:4px;font-size:13px;font-weight:500;color:var(--sea);text-decoration:none;}
 .adr-tel.pend{font-style:italic;color:var(--ink-soft);font-size:12px;font-weight:400;}
+.gaeste-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+.gast-chip{font-size:12px;padding:5px 11px;background:var(--card);border:1px solid var(--line);border-radius:100px;color:var(--ink);white-space:nowrap;}
+.gast-chip.fraglich{border-style:dashed;color:var(--ink-soft);}
+.gast-chip.fraglich::after{content:" ?";color:var(--gold);font-size:10px;}
+.sitz-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px;}
+@media(max-width:400px){.sitz-pair{grid-template-columns:1fr;}}
+.sitz-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-soft);margin-bottom:6px;}
+.sitz-placeholder{width:100%;aspect-ratio:105/148;background:repeating-linear-gradient(45deg,var(--sand-deep),var(--sand-deep) 8px,var(--sand) 8px,var(--sand) 16px);border:2px dashed var(--line);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--ink-soft);font-size:12px;font-style:italic;text-align:center;padding:12px;}
+.sitz-img{width:100%;aspect-ratio:105/148;object-fit:contain;border-radius:8px;display:block;border:1px solid var(--line);}
 .subgroup{margin-top:10px;border-top:1px dashed var(--line);padding-top:10px;}
 .subgroup-title{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-bottom:8px;font-weight:600;}
 .sub{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start;}
@@ -581,7 +590,48 @@ body.lb-open{overflow:hidden;}
       {"name": "Giuseppe", "rolle": "DJ", "tel": "+49 1514 2899446"},
       {"name": "Anita", "rolle": "Villa Mare", "tel": "+49 176 84346763"},
       {"name": "Alexandra", "rolle": "Huch Floristik", "tel": "+49 176 43890320"}
-    ]
+    ],
+    "gaeste": [
+      {"name": "Christina",                      "fr": true,  "sa": true},
+      {"name": "Marina",                         "fr": true,  "sa": true},
+      {"name": "Helga",                          "fr": true,  "sa": true, "fraglich": true},
+      {"name": "Inge & Horst H.",                "fr": true,  "sa": true},
+      {"name": "Michaela & Ulrich",              "fr": true,  "sa": true},
+      {"name": "Gisela",                         "fr": true,  "sa": true},
+      {"name": "Kathrin & Cedric + Felix",       "fr": true,  "sa": true},
+      {"name": "Katha & Marc + Lotta",           "fr": true,  "sa": true},
+      {"name": "Maria & Jordan + Tommy",         "fr": true,  "sa": true},
+      {"name": "Marie & Jörn",                   "fr": true,  "sa": true},
+      {"name": "Ilka & Nick",                    "fr": true,  "sa": true},
+      {"name": "Janika & Sebastian",             "fr": true,  "sa": true},
+      {"name": "Anna & Jannis L.",               "fr": true,  "sa": true},
+      {"name": "Anja & Kai V.",                  "fr": true,  "sa": true},
+      {"name": "Cora & Marvin",                  "fr": true,  "sa": true},
+      {"name": "Thijs",                          "fr": true,  "sa": true},
+      {"name": "Ines & Lukas S.",                "fr": false, "sa": true},
+      {"name": "Jan H. & Sheila",                "fr": false, "sa": true},
+      {"name": "Katrin & Max",                   "fr": false, "sa": true},
+      {"name": "Jana & Jan K.",                  "fr": false, "sa": true},
+      {"name": "Loreen & Kai R.",                "fr": false, "sa": true},
+      {"name": "Hamid & Linda",                  "fr": false, "sa": true},
+      {"name": "Sarah & Salva",                  "fr": false, "sa": true},
+      {"name": "Samyra & Lukas B. + Laila",      "fr": false, "sa": true},
+      {"name": "Lennart & Paula",                "fr": false, "sa": true},
+      {"name": "Laura & Christian D.",           "fr": false, "sa": true},
+      {"name": "Hanna & Jannis R.",              "fr": false, "sa": true},
+      {"name": "Anke & Horst D.",                "fr": false, "sa": true},
+      {"name": "Svenja & Christian K.",          "fr": false, "sa": true},
+      {"name": "Ann-Kathrin & Sascha",           "fr": false, "sa": true},
+      {"name": "Bianka & Rudi",                  "fr": false, "sa": true},
+      {"name": "Mia & Niklas",                   "fr": false, "sa": true},
+      {"name": "Monika & Benedikt",              "fr": false, "sa": true},
+      {"name": "Nicole",                         "fr": false, "sa": true},
+      {"name": "Hildegard & Frank",              "fr": false, "sa": true}
+    ],
+    "sitzordnung": {
+      "freitag": null,
+      "samstag": null
+    }
   },
   "fuss": {
     "gruss": "Danke! ♥️",
@@ -804,7 +854,45 @@ body.lb-open{overflow:hidden;}
       }).join('')+'</div>';
       kontHtml = '<details class="adr-group"><summary>📞 Kontakte <span class="adr-chevron">▾</span></summary><div class="adr-group-body">'+kontCards+'</div></details>';
     }
-    return '<section class="adr-wrap"><h3>📍 Adressen &amp; Kontakte</h3>'+kontHtml+locHtml+perHtml+'</section>';
+    var gaesteHtml = '';
+    if(data.adressen.gaeste&&data.adressen.gaeste.length){
+      function gaesteChips(list){
+        return '<div class="gaeste-chips">'+list.map(function(g){
+          return '<span class="gast-chip'+(g.fraglich?' fraglich':'')+'">'+esc(g.name)+'</span>';
+        }).join('')+'</div>';
+      }
+      var frList = data.adressen.gaeste.filter(function(g){return g.fr;});
+      var saList = data.adressen.gaeste.filter(function(g){return g.sa;});
+      var frCount = frList.length;
+      var saCount = saList.length;
+      var frBody = gaesteChips(frList);
+      var saBody = gaesteChips(saList);
+      gaesteHtml = '<details class="adr-group">'+
+        '<summary>👥 Gästeliste <span class="adr-chevron">▾</span></summary>'+
+        '<div class="adr-group-body">'+
+          '<div class="adr-subtitle">Freitag · Standesamt &amp; Dinner ('+frCount+')</div>'+frBody+
+          '<div class="adr-subtitle" style="margin-top:14px;">Samstag · Trauung &amp; Feier ('+saCount+')</div>'+saBody+
+        '</div>'+
+      '</details>';
+    }
+    var sitzHtml = '';
+    if(data.adressen.sitzordnung){
+      var sz = data.adressen.sitzordnung;
+      function sitzCard(src, label){
+        var inner = src
+          ? '<img class="sitz-img" src="'+esc(src)+'" alt="Sitzordnung '+esc(label)+'">'
+          : '<div class="sitz-placeholder">🪑<span>Sitzordnung<br>'+esc(label)+'</span></div>';
+        return '<div><div class="sitz-label">'+esc(label)+'</div>'+inner+'</div>';
+      }
+      sitzHtml = '<details class="adr-group">'+
+        '<summary>🪑 Sitzordnung <span class="adr-chevron">▾</span></summary>'+
+        '<div class="adr-group-body"><div class="sitz-pair">'+
+          sitzCard(sz.freitag, 'Freitag')+
+          sitzCard(sz.samstag, 'Samstag')+
+        '</div></div>'+
+      '</details>';
+    }
+    return '<section class="adr-wrap"><h3>📋 Übersicht</h3>'+kontHtml+locHtml+perHtml+gaesteHtml+sitzHtml+'</section>';
   }
 
   function renderTag(t){
