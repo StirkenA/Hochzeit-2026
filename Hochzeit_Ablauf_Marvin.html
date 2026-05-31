@@ -120,6 +120,9 @@ body.hide-done-preps .prep.all-done{display:none;}
 .adr-addr{font-size:12px;color:var(--ink-soft);line-height:1.4;}
 .adr-addr.pend{font-style:italic;color:var(--gold);}
 .adr-link{display:inline-flex;align-items:center;gap:3px;margin-top:5px;font-size:11.5px;font-weight:500;color:var(--sea);text-decoration:none;}
+.adr-rolle{font-size:11px;color:var(--ink-soft);margin-bottom:4px;text-transform:uppercase;letter-spacing:.1em;}
+.adr-tel{display:inline-flex;align-items:center;gap:4px;margin-top:4px;font-size:13px;font-weight:500;color:var(--sea);text-decoration:none;}
+.adr-tel.pend{font-style:italic;color:var(--ink-soft);font-size:12px;font-weight:400;}
 .subgroup{margin-top:10px;border-top:1px dashed var(--line);padding-top:10px;}
 .subgroup-title{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-bottom:8px;font-weight:600;}
 .sub{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start;}
@@ -571,6 +574,13 @@ body.lb-open{overflow:hidden;}
       {"name": "Jannis & Anna", "adresse": "Fehlingstraße 12A", "url": "https://maps.app.goo.gl/qSCiqPTBLvmCGj7v6"},
       {"name": "Kai & Anja", "adresse": "Kaiserallee 4", "url": "https://maps.app.goo.gl/wCyFPfzLSo5A6t4CA"},
       {"name": "Thijs", "adresse": "Ausstehend", "url": null}
+    ],
+    "kontakte": [
+      {"name": "Passat Hausmeister", "rolle": "Passat", "tel": ""},
+      {"name": "Martyna", "rolle": "Fotografin", "tel": ""},
+      {"name": "Giuseppe", "rolle": "DJ", "tel": ""},
+      {"name": "Anita", "rolle": "Villa Mare", "tel": ""},
+      {"name": "Alexandra", "rolle": "Huch Floristik", "tel": ""}
     ]
   },
   "fuss": {
@@ -779,7 +789,22 @@ body.lb-open{overflow:hidden;}
     var perHtml = (data.adressen.personen&&data.adressen.personen.length)
       ? '<details class="adr-group"><summary>🏠 Unterkünfte <span class="adr-chevron">▾</span></summary><div class="adr-group-body">'+cards(data.adressen.personen)+'</div></details>'
       : '';
-    return '<section class="adr-wrap"><h3>📍 Adressen</h3>'+locHtml+perHtml+'</section>';
+    var kontHtml = '';
+    if(data.adressen.kontakte&&data.adressen.kontakte.length){
+      var kontCards = '<div class="adr-grid">'+data.adressen.kontakte.map(function(k){
+        var hasTel = k.tel && k.tel.trim()!=='';
+        var telEl = hasTel
+          ? '<a class="adr-tel" href="tel:'+esc(k.tel)+'">📞 '+esc(k.tel)+'</a>'
+          : '<span class="adr-tel pend">Nummer ausstehend</span>';
+        return '<div class="adr-card">'+
+          '<div class="adr-rolle">'+esc(k.rolle)+'</div>'+
+          '<div class="adr-name">'+esc(k.name)+'</div>'+
+          telEl+
+        '</div>';
+      }).join('')+'</div>';
+      kontHtml = '<details class="adr-group"><summary>📞 Kontakte <span class="adr-chevron">▾</span></summary><div class="adr-group-body">'+kontCards+'</div></details>';
+    }
+    return '<section class="adr-wrap"><h3>📍 Adressen &amp; Kontakte</h3>'+kontHtml+locHtml+perHtml+'</section>';
   }
 
   function renderTag(t){
